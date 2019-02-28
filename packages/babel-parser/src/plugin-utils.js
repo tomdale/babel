@@ -89,11 +89,13 @@ import flow from "./plugins/flow";
 import jsx from "./plugins/jsx";
 import typescript from "./plugins/typescript";
 import placeholders from "./plugins/placeholders";
+import glimmer from "./plugins/glimmer";
 
 // NOTE: order is important. estree must come first; placeholders must come last.
 export const mixinPlugins: { [name: string]: MixinPlugin } = {
   estree,
   jsx,
+  glimmer,
   flow,
   typescript,
   placeholders,

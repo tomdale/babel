@@ -35,5 +35,8 @@
   },
   "bin": {
     "parser": "./bin/babel-parser.js"
+  },
+  "dependencies": {
+    "htmlparser2": "^3.10.1"
   }
 }
