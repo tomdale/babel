@@ -52,10 +52,10 @@ export default (superClass: Class<Parser>): Class<Parser> =>
       // character.
       --this.state.pos;
       for (;;) {
-        if (this.state.pos >= this.state.length) {
+        if (this.state.pos >= this.length) {
           this.raise(this.state.start, "Unterminated class tag");
         }
-        const ch = this.state.input.charAt(this.state.pos);
+        const ch = this.input.charAt(this.state.pos);
         parser.write(ch);
         if (finished) {
           break;
@@ -66,7 +66,7 @@ export default (superClass: Class<Parser>): Class<Parser> =>
 
       // Subtract tag name + </ and > characaters.
       const valueEnd = this.state.pos - (startTag: any).length - 2;
-      const value = this.state.input.slice(valueStart, valueEnd);
+      const value = this.input.slice(valueStart, valueEnd);
       this.nextToken();
 
       return [startTag, value];

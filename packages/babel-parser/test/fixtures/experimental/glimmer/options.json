@@ -1,7 +1,6 @@
 {
   "plugins": [
     "classProperties",
-    "glimmer",
-    "jsx"
+    "glimmer"
   ]
 }
